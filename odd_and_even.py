@@ -27,7 +27,11 @@ class NumberProcessor:
 
     def export_numbers(self, even_path="even.txt", odd_path="odd.txt"):
         with open(even_path, 'w') as e_file:
-            e_file.write("\n".join(self.even_storage))
+            e_file.write("\n".join(self.even_numbers))
+
+        with open(odd_path, 'w') as d_file:
+            d_file.write("\n".join(self.odd_numbers))
+    
 
 
 
