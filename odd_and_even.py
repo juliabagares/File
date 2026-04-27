@@ -1,0 +1,5 @@
+class Color:
+    PURPLE = '\033[95m'
+    CYAN = '\033[96m'
+    GREEN = '\033[92m'
+    RESET = '\033[0m'
