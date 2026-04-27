@@ -18,6 +18,12 @@ class NumberProcessor:
             print (f"Error: {self.source} not found.")
             return []
 
+    def sort_logic(self):
+        raw_numbers = self._extract_numbers()
+        for number in raw_numbers:
+            if number % 2 == 0:
+                self.even_numbers.append(str(number))
+
 
 
 
