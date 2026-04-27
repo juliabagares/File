@@ -9,5 +9,15 @@ class NumberProcessor:
         self.source = source_file
         self.even_numbers = []
         self.odd_numbers = []
-        
+
+    def _extract_numbers(self):
+        try:
+            with open(self.source, "r") as file:
+                return [int(line.strip()) for line in file if line.strip()]
+        except FileNotFoundError:
+            print (f"Error: {self.source} not found.")
+            return []
+
+
+
 
