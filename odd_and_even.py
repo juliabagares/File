@@ -31,8 +31,10 @@ class NumberProcessor:
 
         with open(odd_path, 'w') as d_file:
             d_file.write("\n".join(self.odd_numbers))
-    
 
+        print(f"Task Complete: {len(self.even_numbers)} evens and {len(self.odd_numbers)} odds saved.")
 
-
-
+    def _display_report(self):
+        print(f"{Color.GREEN}--- PROCESSING COMPLETE ---")
+        print(f"{Color.PURPLE}Evens Captured: {len(self.even_numbers)}")
+        print(f"{Color.CYAN}Odds Captured: {len(self.odd_numbers)}")
