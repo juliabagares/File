@@ -39,5 +39,8 @@ class NumberProcessor:
         print(f"{Color.PURPLE}Evens Captured: {len(self.even_numbers)}")
         print(f"{Color.CYAN}Odds Captured: {len(self.odd_numbers)}")
 
-Sorter = NumberProcessor('numbers.txt')
-Sorter.process()
+
+processor = NumberProcessor()
+processor.sort_logic()
+processor.export_numbers()
+processor._display_report()
