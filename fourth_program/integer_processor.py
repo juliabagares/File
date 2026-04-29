@@ -1,5 +1,3 @@
-from unicodedata import category
-
 class IntegerProcessor:
     def __init__(self, source="integers.txt"):
         self.source = source
@@ -21,7 +19,7 @@ class IntegerProcessor:
                     if not line.strip(): continue
 
                     value = int(line.strip())
-                    result = self._process_logic(value)
+                    category, result = self._process_logic(value)
 
                     if category == "even":
                         evens.write(f"{result}\n")
@@ -29,6 +27,3 @@ class IntegerProcessor:
                         odds.write(f"{result}\n")
         except FileNotFoundError:
             print(f"The file{self.source} doesn't exist")
-
-processor = IntegerProcessor()
-processor.run()
