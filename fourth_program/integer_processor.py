@@ -29,3 +29,6 @@ class IntegerProcessor:
                         odds.write(f"{result}\n")
         except FileNotFoundError:
             print(f"The file{self.source} doesn't exist")
+
+processor = IntegerProcessor()
+processor.run()
