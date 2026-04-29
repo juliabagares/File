@@ -4,4 +4,5 @@ class LifeRecorder:
 
     def start_session(self):
         print(f"Welcome to LifeRecorder(saving to {self.filename})")
-    
+
+        with open(self.filename, "a") as file:
