@@ -1,3 +1,5 @@
+from unicodedata import category
+
 class IntegerProcessor:
     def __init__(self, source="integers.txt"):
         self.source = source
@@ -12,8 +14,16 @@ class IntegerProcessor:
 
     def run(self):
         try:
-        with open (self.source, "r") as src, \
-            open(self.evens_file, "w") as evens, \
-            open(self.odds_file, "w") as odds:
-            for line in src:
-                if not line.strip(): continue
+            with open (self.source, "r") as src, \
+                open(self.evens_file, "w") as evens, \
+                open(self.odds_file, "w") as odds:
+                for line in src:
+                    if not line.strip(): continue
+
+                    value = int(line.strip())
+                    result = self._process_logic(value)
+
+                    if category == "even":
+                        evens.write(f"{result}\n")
+                    else:
+                        odds.write(f"{result}\n")
