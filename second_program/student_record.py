@@ -23,3 +23,7 @@ class StudentRecord:
         except ValueError:
             print("Error: Could not process GWA numbers.")
 
+    def find_top_student(self):
+        if not self.roster:
+            print("No data available.")
+            return
