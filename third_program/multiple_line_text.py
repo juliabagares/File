@@ -6,3 +6,6 @@ class LifeRecorder:
         print(f"Welcome to LifeRecorder(saving to {self.filename})")
 
         with open(self.filename, "a") as file:
+            while True:
+                entry = input("Enter line: ")
+                file.write(f"{entry}\n")
