@@ -27,3 +27,5 @@ class IntegerProcessor:
                         evens.write(f"{result}\n")
                     else:
                         odds.write(f"{result}\n")
+        except FileNotFoundError:
+            print(f"The file{self.source} doesn't exist")
