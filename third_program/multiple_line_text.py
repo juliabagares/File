@@ -13,3 +13,6 @@ class LifeRecorder:
                 if input("Are there more lines y/n? ").lower() != 'y':
                     print("Session saved. Goodbye!")
                     break
+
+recorder = LifeRecorder()
+recorder.start_session()
