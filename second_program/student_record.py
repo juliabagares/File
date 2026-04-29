@@ -19,4 +19,7 @@ class StudentRecord:
                         student_obj = Student(name_part.strip(), float(gwa_part.strip()))
                         self.roster.append(student_obj)
         except FileNotFoundError:
-            print("Error: File not found.")
+            print(f"Error: {self.source} not found.")
+        except ValueError:
+            print("Error: Could not process GWA numbers.")
+
