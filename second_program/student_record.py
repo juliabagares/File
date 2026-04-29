@@ -32,3 +32,8 @@ class StudentRecord:
         print(f"TOP STUDENT: {best_student.name}")
         print(f"GWA:         {best_student.gwa}")
         print("-" * 30)
+
+if __name__ == "__main__":
+    app = StudentRecord("students.txt")
+    app.load_records()
+    app.find_top_student()
