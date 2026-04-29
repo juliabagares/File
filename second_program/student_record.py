@@ -27,3 +27,8 @@ class StudentRecord:
         if not self.roster:
             print("No data available.")
             return
+        best_student = min(self.roster, key=lambda s: s.gwa)
+        print("-" * 30)
+        print(f"TOP STUDENT: {best_student.name}")
+        print(f"GWA:         {best_student.gwa}")
+        print("-" * 30)
