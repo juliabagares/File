@@ -9,3 +9,7 @@ class LifeRecorder:
             while True:
                 entry = input("Enter line: ")
                 file.write(f"{entry}\n")
+
+                if input("Are there more lines y/n? ").lower() != 'y':
+                    print("Session saved. Goodbye!")
+                    break
